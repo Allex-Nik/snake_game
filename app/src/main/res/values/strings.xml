@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Snake</string>
+    <string name="left">left</string>
+    <string name="up">up</string>
+    <string name="down">down</string>
+    <string name="right">right</string>
+    <string name="score_prefix">Score: </string>
+    <string name="score_image"/>
 </resources>
