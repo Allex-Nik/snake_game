@@ -6,4 +6,10 @@
     <string name="right">right</string>
     <string name="score_prefix">Score: </string>
     <string name="score_image"/>
+    <string name="start_game_button">Start game</string>
+    <string name="background_image_descr">Image for the background of the start game display</string>
+    <string name="game_name">SNAKE</string>
+    <string name="end_game">YOU LOST</string>
+    <string name="try_again_button">Try again</string>
+    <string name="exit_button">Exit</string>
 </resources>

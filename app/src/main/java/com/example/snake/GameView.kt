@@ -2,6 +2,7 @@ package com.example.snake
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent
 import android.graphics.Bitmap
 import android.graphics.BitmapFactory
 import android.graphics.Canvas
@@ -11,9 +12,11 @@ import android.util.AttributeSet
 import android.view.MotionEvent
 import android.view.View
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 
 class GameView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
+    private val activity: AppCompatActivity? = context as? AppCompatActivity
     var snake: Snake = Snake(this)
     var food: Food? = null
     var scoreText: TextView? = null
@@ -80,5 +83,9 @@ class GameView(context: Context?, attrs: AttributeSet?) : View(context, attrs) {
 
     private fun endGame() {
         gameOver = true
+        val intent = Intent(activity, EndGameActivity::class.java).apply {
+            putExtra("SCORE", snake.score)
+        }
+        activity?.startActivity(intent)
     }
 }
